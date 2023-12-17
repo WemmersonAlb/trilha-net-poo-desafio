@@ -3,12 +3,25 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        // DONE: Implementar as propriedades faltantes de acordo com o diagrama
+        public string Modelo { get; }
+        public string Imei { get; }
+        public int Memoria { get; }
+        //Extras
+        protected Dictionary<int, string> AppStore { get; set;}
+        protected List<string> AppsInstalados{get; set;}
 
-        public Smartphone(string numero)
+
+        public Smartphone(){}
+        public Smartphone(string numero, string modelo, string imei, int memoria)
         {
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            // DONE: Passar os parâmetros do construtor para as propriedades
+            Modelo = modelo;
+            Imei = imei;
+            Memoria = memoria;
+            AppsInstalados = new List<string>();
+
         }
 
         public void Ligar()
@@ -22,5 +35,8 @@ namespace DesafioPOO.Models
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
+        public abstract void InstalarAplicativoPelaLojaDeApps();
+        public abstract void ListarAplicativos();
+        public abstract void DesinstalarAplicativo();
     }
 }
