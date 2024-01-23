@@ -25,7 +25,8 @@ namespace DesafioPOO.Models
         public override void InstalarAplicativo(string nomeApp)
         {
             AppsInstalados.Add(nomeApp);
-            Console.WriteLine($"O aplicativo {nomeApp} foi instalado com sucesso!!!");           throw new NotImplementedException();
+            Console.WriteLine($"O aplicativo {nomeApp} foi instalado com sucesso!!!");           
+            //throw new NotImplementedException();
         }
         //Extras
         public override void DesinstalarAplicativo()

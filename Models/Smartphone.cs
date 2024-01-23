@@ -11,7 +11,6 @@ namespace DesafioPOO.Models
         protected Dictionary<int, string> AppStore { get; set;}
         protected List<string> AppsInstalados{get; set;}
 
-
         public Smartphone(){}
         public Smartphone(string numero, string modelo, string imei, int memoria)
         {
